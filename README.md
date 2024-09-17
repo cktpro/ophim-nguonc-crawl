@@ -14,10 +14,10 @@
 https://github.com/hacoidev/ophim-core
 
 ## Install
-- Tại thư mục của Project: `composer require hacoidev/ophim-crawler`
+- Tại thư mục của Project: `composer require roxone/ophim-crawler`
 
 ## Update
-- Tại thư mục của Project: `composer update hacoidev/ophim-crawler`
+- Tại thư mục của Project: `composer update roxone/ophim-crawler`
 
 ## Setup Crontab
 [Setup crontab, add this entry](https://github.com/hacoidev/ophim-core#reset-view-counter)
