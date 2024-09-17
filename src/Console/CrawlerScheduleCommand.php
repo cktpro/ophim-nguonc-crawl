@@ -44,7 +44,7 @@ class CrawlerScheduleCommand extends Command
     public function handle()
     {
         if(!$this->checkCrawlerScheduleEnable()) return 0;
-        $link = sprintf('%s/danh-sach/phim-moi-cap-nhat', Option::get('domain'));
+        $link = sprintf('%s/api/films/danh-sach/hoat-hinh', 'https://phim.nguonc.com');
         $data = collect();
         $page_from = Option::get('crawler_schedule_page_from', 1);
         $page_to = Option::get('crawler_schedule_page_to', 2);
@@ -79,7 +79,7 @@ class CrawlerScheduleCommand extends Command
                     Option::get('crawler_schedule_excludedRegions', []),
                     Option::get('crawler_schedule_excludedType', []),
                     false))
-                    ->handle();
+                    ->handle_nguonc();
             } catch (\Exception $e) {
                 $this->logger->error(sprintf("%s ERROR: %s", $movie['slug'], $e->getMessage()));
                 $count_error++;
