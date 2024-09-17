@@ -1,0 +1,29 @@
+{
+    "name": "roxone/ophim-nguonc-crawler",
+    "description": "Tool crawler",
+    "type": "package",
+    "require": {
+        "hacoidev/ophim-core": "^1.0.0",
+        "intervention/image": "^2.7"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ophim\\Crawler\\OphimCrawler\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "roxone",
+            "email": "roxone.dev@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ophim\\Crawler\\OphimCrawler\\OphimCrawlerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
