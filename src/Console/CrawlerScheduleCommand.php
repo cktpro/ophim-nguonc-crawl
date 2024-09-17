@@ -71,7 +71,8 @@ class CrawlerScheduleCommand extends Command
                     $this->logger->notice(sprintf("Stop Crawler Movies (TOTAL: %d | CRAWED: %d | ERROR %d)", $count_movies, $key, $count_error));
                     return 0;
                 }
-                $link = sprintf('%s/phim/%s', Option::get('domain'), $movie['slug']);
+                // $link = sprintf('%s/api/film/%s', Option::get('domain'), $movie['slug']);
+                $link = sprintf('%s/api/film/%s', "https://phim.nguonc.com", $movie['slug']);
                 $crawler = (new Crawler(
                     $link,
                     Option::get('crawler_schedule_fields', Option::getAllOptions()['crawler_schedule_fields']['default']),
